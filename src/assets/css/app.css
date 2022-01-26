@@ -1,0 +1,125 @@
+.grid {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px;
+  align-content: center;
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.grid-item {
+  border-radius: 5px;
+  border: white;
+}
+
+.style-container {
+  display: grid;
+}
+#heading-two {
+  align-self: center;
+}
+.container-item {
+  text-align: center;
+}
+.top-image {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  background-color: cornsilk;
+}
+.header-image-container {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.navbar {
+  text-align: center !important;
+  background-color: #181815;
+  font-weight: 600;
+  color: white;
+  width: 100%;
+  padding-top: 1.5em;
+  padding-bottom: 0.1em;
+  text-transform: uppercase;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: 0;
+  padding-top: 0;
+  transition: 0.5s;
+}
+
+nav ul {
+  list-style: none;
+  /* justify-items: center; */
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+nav li a {
+  -webkit-transition: 0.5s color ease-in-out;
+  transition: 0.5s color ease-in-out;
+  text-decoration: none;
+}
+.hoverable {
+  display: inline-block;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  vertical-align: middle;
+  position: relative;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+.hoverable:before {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+}
+.hoverable:hover,
+.hoverable:active,
+.hoverable:focus {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.hoverable:hover:before,
+.hoverable:active:before,
+.hoverable:focus:before {
+  opacity: 1;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
